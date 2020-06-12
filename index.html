@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Waxom</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Raleway:400,500,600,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Sprite -->
+<svg style="display: none;">
+    <symbol id="pencil" viewBox="0 0 32 32">
+        <g>
+            <path d="M30.276,1.722C29.168,0.611,27.69,0,26.121,0s-3.045,0.61-4.154,1.72L4.294,19.291c-0.105,0.104-0.185,0.229-0.235,0.367
+                l-4,11c-0.129,0.355-0.046,0.756,0.215,1.031C0.466,31.891,0.729,32,1,32c0.098,0,0.196-0.014,0.293-0.044l9.949-3.052
+                c0.156-0.047,0.298-0.133,0.414-0.248l18.621-18.621C31.389,8.926,32,7.448,32,5.878C31.999,4.309,31.389,2.832,30.276,1.722z
+                 M10.092,27.165l-3.724,1.144c-0.217-0.637-0.555-1.201-1.016-1.662c-0.401-0.399-0.866-0.709-1.356-0.961L5.7,21H8v2
+                c0,0.553,0.447,1,1,1h1.765L10.092,27.165z M24.812,12.671L12.628,24.855l0.35-1.647c0.062-0.296-0.012-0.603-0.202-0.837
+                C12.586,22.136,12.301,22,12,22h-2v-2c0-0.552-0.448-1-1-1H7.422L19.315,7.175l0.012,0.011c0.732-0.733,1.707-1.136,2.742-1.136
+                s2.011,0.403,2.742,1.136s1.138,1.707,1.138,2.743C25.949,10.965,25.546,11.938,24.812,12.671z M28.862,8.621L27.93,9.554
+                c-0.09-1.429-0.683-2.761-1.703-3.782c-1.021-1.022-2.354-1.614-3.787-1.703l0.938-0.931l0.002-0.002
+                C24.11,2.403,25.085,2,26.121,2s2.01,0.403,2.741,1.136C29.596,3.869,30,4.843,30,5.878C30,6.915,29.598,7.889,28.862,8.621z
+                 M22.293,8.293l-10,10c-0.391,0.391-0.391,1.023,0,1.414C12.487,19.902,12.744,20,13,20s0.511-0.098,0.707-0.293l10-10
+                c0.391-0.391,0.391-1.023,0-1.414C23.315,7.902,22.684,7.902,22.293,8.293z"/>
+        </g>
+    </symbol>
+    <symbol id="layers" viewBox="0 0 54.849 54.849">
+        <g>
+            <path d="M54.497,39.614l-10.363-4.49l-14.917,5.968c-0.537,0.214-1.165,0.319-1.793,0.319c-0.627,0-1.254-0.104-1.79-0.318
+                l-14.921-5.968L0.351,39.614c-0.472,0.203-0.467,0.524,0.01,0.716L26.56,50.81c0.477,0.191,1.251,0.191,1.729,0L54.488,40.33
+                C54.964,40.139,54.969,39.817,54.497,39.614z"/>
+            <path d="M54.497,27.512l-10.364-4.491l-14.916,5.966c-0.536,0.215-1.165,0.321-1.792,0.321c-0.628,0-1.256-0.106-1.793-0.321
+                l-14.918-5.966L0.351,27.512c-0.472,0.203-0.467,0.523,0.01,0.716L26.56,38.706c0.477,0.19,1.251,0.19,1.729,0l26.199-10.479
+                C54.964,28.036,54.969,27.716,54.497,27.512z"/>
+            <path d="M0.361,16.125l13.662,5.465l12.537,5.015c0.477,0.191,1.251,0.191,1.729,0l12.541-5.016l13.658-5.463
+                c0.477-0.191,0.48-0.511,0.01-0.716L28.277,4.048c-0.471-0.204-1.236-0.204-1.708,0L0.351,15.41
+                C-0.121,15.614-0.116,15.935,0.361,16.125z"/>
+        </g>
+    </symbol>
+    <symbol id="gear" viewBox="0 0 268.765 268.765">
+        <g>
+            <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M267.92,119.461c-0.425-3.778-4.83-6.617-8.639-6.617
+                c-12.315,0-23.243-7.231-27.826-18.414c-4.682-11.454-1.663-24.812,7.515-33.231c2.889-2.641,3.24-7.062,0.817-10.133
+                c-6.303-8.004-13.467-15.234-21.289-21.5c-3.063-2.458-7.557-2.116-10.213,0.825c-8.01,8.871-22.398,12.168-33.516,7.529
+                c-11.57-4.867-18.866-16.591-18.152-29.176c0.235-3.953-2.654-7.39-6.595-7.849c-10.038-1.161-20.164-1.197-30.232-0.08
+                c-3.896,0.43-6.785,3.786-6.654,7.689c0.438,12.461-6.946,23.98-18.401,28.672c-10.985,4.487-25.272,1.218-33.266-7.574
+                c-2.642-2.896-7.063-3.252-10.141-0.853c-8.054,6.319-15.379,13.555-21.74,21.493c-2.481,3.086-2.116,7.559,0.802,10.214
+                c9.353,8.47,12.373,21.944,7.514,33.53c-4.639,11.046-16.109,18.165-29.24,18.165c-4.261-0.137-7.296,2.723-7.762,6.597
+                c-1.182,10.096-1.196,20.383-0.058,30.561c0.422,3.794,4.961,6.608,8.812,6.608c11.702-0.299,22.937,6.946,27.65,18.415
+                c4.698,11.454,1.678,24.804-7.514,33.23c-2.875,2.641-3.24,7.055-0.817,10.126c6.244,7.953,13.409,15.19,21.259,21.508
+                c3.079,2.481,7.559,2.131,10.228-0.81c8.04-8.893,22.427-12.184,33.501-7.536c11.599,4.852,18.895,16.575,18.181,29.167
+                c-0.233,3.955,2.67,7.398,6.595,7.85c5.135,0.599,10.301,0.898,15.481,0.898c4.917,0,9.835-0.27,14.752-0.817
+                c3.897-0.43,6.784-3.786,6.653-7.696c-0.451-12.454,6.946-23.973,18.386-28.657c11.059-4.517,25.286-1.211,33.281,7.572
+                c2.657,2.89,7.047,3.239,10.142,0.848c8.039-6.304,15.349-13.534,21.74-21.494c2.48-3.079,2.13-7.559-0.803-10.213
+                c-9.353-8.47-12.388-21.946-7.529-33.524c4.568-10.899,15.612-18.217,27.491-18.217l1.662,0.043
+                c3.853,0.313,7.398-2.655,7.865-6.588C269.044,139.917,269.058,129.639,267.92,119.461z M134.595,179.491
+                c-24.718,0-44.824-20.106-44.824-44.824c0-24.717,20.106-44.824,44.824-44.824c24.717,0,44.823,20.107,44.823,44.824
+                C179.418,159.385,159.312,179.491,134.595,179.491z"/>
+    </g>
+    </symbol>
+    <symbol id="bag" viewBox="0 0 97.403 97.403">
+        <g>
+            <path d="M97.113,36.76c-0.306-0.442-0.809-0.706-1.346-0.706l-14.42-0.005l0.816-2.233c0.608-1.663,0.444-3.354-0.452-4.636
+                c-0.858-1.229-2.289-1.935-3.927-1.935H66.538c-2.843,0-5.878,2.1-6.896,4.883l-1.555,3.911L46.89,36.034h-0.001
+                c-0.661,0-1.258,0.397-1.512,1.01l-12.784,30.85c-0.209,0.506-0.152,1.08,0.151,1.535c0.304,0.455,0.813,0.729,1.36,0.729h50.039
+                c0.681,0,1.29-0.422,1.53-1.061l11.625-30.83C97.487,37.764,97.419,37.201,97.113,36.76z M76.975,33.716l-0.854,2.33
+                l-12.563-0.005l0.814-2.226c0.337-0.921,1.46-1.662,2.165-1.662c0,0,7.09,0,8.965,0C77.564,32.153,76.975,33.716,76.975,33.716z"
+                />
+            <path d="M42.695,36.037l-3.377,0.002l-1.555-3.911c-1.02-2.783-4.054-4.883-6.897-4.883H19.618c-1.637,0-3.066,0.706-3.926,1.935
+                c-0.896,1.283-1.061,2.973-0.452,4.636l0.816,2.233l-14.42,0.005c-0.537,0-1.04,0.264-1.346,0.706
+                c-0.306,0.441-0.374,1.005-0.185,1.508L11.73,69.099c0.24,0.638,0.85,1.06,1.53,1.06h16.658c-0.419-1.073-0.423-2.272,0.028-3.358
+                L42.695,36.037z M21.283,36.046l-0.854-2.33c0,0-0.59-1.563,1.473-1.563c1.874,0,8.964,0,8.964,0c0.706,0,1.829,0.741,2.166,1.662
+                l0.815,2.226L21.283,36.046z"/>
+        </g>
+    </symbol>
+</svg>
+
+
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__inner">
+           <div class="logo">
+                <img src="img/logo.png" alt="">
+                <span>Waxom</span>
+           </div>
+
+            <a href="#" class="header__card">
+               <i class="fas fa-shopping-bag"></i>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#" class="nav__link" data-scroll="#intro">Главная</a>
+                <a href="#" class="nav__link" data-scroll="#about">О нас</a>
+                <a href="#" class="nav__link" data-scroll="#portfolio">Портфолио</a>
+                <a href="#" class="nav__link" data-scroll="#features">Преимущества</a>
+                <a href="#" class="nav__link" data-scroll="#blog">Блог</a>
+                <a href="#" class="nav__link" data-scroll="#contact">Контакты</a>
+                <div class="nav__right">
+                    <a href="#" class="nav__link">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+            </nav>
+
+            <button class="nav-toggle" id="nav-toggle">
+                <span class="nav-toggle__item">Меню</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="slick">
+   <div>
+        <div class="intro" id="intro">
+            <div class="container">
+                <div class="intro__inner">
+                    <div class="intro__suptitle">Уникальный и Современный дизайн</div>
+                    <h2 class="intro__title">PSD шаблонов</h2>
+                    <div class="intro__text">
+                        Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Прямо решила единственное вскоре использовало. Которое вопроса, бросил.
+                    </div>
+
+                    <a href="#" class="btn">Начать</a>
+                </div>
+
+                <a href="#" class="anchor" data-anch="#serv">
+                    <div class="anchor__mouse"></div>
+                    <div class="anchor__arrow">
+                        <img src="img/scroll-arrow.png" alt>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="intro intro--ice" id="intro">
+            <div class="container">
+                <div class="intro__inner">
+                    <div class="intro__suptitle">Уникальный и Современный дизайн</div>
+                    <h2 class="intro__title">PSD шаблонов</h2>
+                    <div class="intro__text">
+                        Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Прямо решила единственное вскоре использовало. Которое вопроса, бросил.
+                    </div>
+
+                    <a href="#" class="btn">Начать</a>
+
+                    <a href="#" class="anchor" data-anch="#serv">
+                        <div class="anchor__mouse"></div>
+                        <div class="anchor__arrow">
+                            <img src="img/scroll-arrow.png" alt>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="serv">
+    <div class="container">
+        <div class="services">
+            <div class="services__item">
+                <svg class="services__icon">
+                    <use xlink:href="#pencil"></use>
+                </svg>
+                <div class="services__title">
+                    Создание дизайна
+                </div>
+                <div class="services__text">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+                </div>
+            </div>
+            <div class="services__item">
+                <svg class="services__icon">
+                    <use xlink:href="#layers"></use>
+                </svg>
+                <div class="services__title">
+                    Разработка
+                </div>
+                <div class="services__text">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+                </div>
+            </div>
+            <div class="services__item">
+                <svg class="services__icon">
+                    <use xlink:href="#gear"></use>
+                </svg>
+                <div class="services__title">
+                    Настройка
+                </div>
+                <div class="services__text">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+                </div>
+            </div>
+            <div class="services__item">
+                <svg class="services__icon">
+                    <use xlink:href="#bag"></use>
+                </svg>
+                <div class="services__title">
+                    Маркетинг
+                </div>
+                <div class="services__text">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+                </div>
+            </div><!-- /.services__item -->
+        </div><!-- /.services -->
+    </div><!-- /.container -->
+</div><!-- /.section -->
+
+<section class="section section--gray" id="about">
+    <div class="container">
+        <div class="section__inner">
+            <h2 class="section__title">
+                Waxom это реализация ваших идей
+            </h2>
+            <div class="section__text">
+                Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вопрос, переулка. Грустный рыбными, дал?
+            </div>
+        </div>
+    </div>
+
+    <div class="ideas">
+        <div class="ideas__item">
+            <img src="img/ideas/idea1.jpg" alt="">
+        </div>
+        <div class="ideas__item active">
+            <img src="img/ideas/idea2.jpg" alt="">
+        </div>
+        <div class="ideas__item">
+            <img src="img/ideas/idea3.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<div class="section--gradient">
+    <div class="container">
+        <div class="offer">
+            <div class="offer__item">
+                <h3 class="offer__title">
+                    Многозадачный WordPress шаблон от
+                    <span>Waxom</span>
+                </h3>
+                <div class="offer__text">
+                    Не забудьте оценить шаблон. Заранее спасибо!
+                </div>
+            </div>
+            <div class="offer__item offer__item--right">
+                <a href="#" class="btn">Приобрести сейчас</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="section" id="portfolio">
+    <div class="container">
+        <div class="section__inner">
+            <h2 class="section__title">
+                Наши последние работы
+            </h2>
+            <div class="section__text">
+                Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имени по всей сбить коварный, рукописи!
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filters__item" type="button" data-filter="all">
+                Все
+            </button>
+            <button class="filters__item" type="button" data-filter="web">
+                Веб дизайн
+            </button>
+            <button class="filters__item" type="button" data-filter="mobile">
+                Мобильные приложения
+            </button>
+            <button class="filters__item" type="button" data-filter="illust">
+                Иллюстрация
+            </button>
+            <button class="filters__item" type="button" data-filter="photo">
+                Фотография
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="card__item" data-cat="web">
+                <div class="card__header">
+                    <img src="img/projects/project1.jpg" alt="" class="card__img">
+                    <div class="card__icons">
+                       <i class="fas fa-link"></i>
+                       <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <div class="card__title">
+                        Далеко-далеко за словесными. веб
+                    </div>
+                    <div class="card__text">
+                        Фотография, Природа
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__item" data-cat="mobile">
+                <div class="card__header">
+                    <img src="img/projects/project2.jpg" alt="" class="card__img">
+                    <div class="card__icons">
+                       <i class="fas fa-link"></i>
+                       <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <div class="card__title">
+                        Далеко-далеко за словесными. МП
+                    </div>
+                    <div class="card__text">
+                        Графический дизайн, Макет
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__item" data-cat="web">
+                <div class="card__header">
+                    <img src="img/projects/project3.jpg" alt="" class="card__img">
+                    <div class="card__icons">
+                       <i class="fas fa-link"></i>
+                       <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <div class="card__title">
+                        Далеко-далеко за словесными. веб
+                    </div>
+                    <div class="card__text">
+                        Фотография, Природа
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__item" data-cat="mobile">
+                <div class="card__header">
+                    <img src="img/projects/project4.jpg" alt="" class="card__img">
+                    <div class="card__icons">
+                       <i class="fas fa-link"></i>
+                       <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <div class="card__title">
+                        Далеко-далеко за словесными. МП
+                    </div>
+                    <div class="card__text">
+                        Фотография, Природа
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__item" data-cat="photo">
+                <div class="card__header">
+                    <img src="img/projects/project5.jpg" alt="" class="card__img">
+                    <div class="card__icons">
+                       <i class="fas fa-link"></i>
+                       <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <div class="card__title">
+                        Далеко-далеко за словесными. Фото
+                    </div>
+                    <div class="card__text">
+                        Графический дизайн, Макет
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__item" data-cat="illust">
+                <div class="card__header">
+                    <img src="img/projects/project6.jpg" alt="" class="card__img">
+                    <div class="card__icons">
+                       <i class="fas fa-link"></i>
+                       <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <div class="card__title">
+                        Далеко-далеко за словесными. Иллюстрация
+                    </div>
+                    <div class="card__text">
+                        Фотография, Природа
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.card -->
+
+        <div class="center">
+            <a href="#" class="btn">Показать еще</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section--video" id="features">
+    <div class="container">
+        <div class="video">
+            <a class="video__play popup-youtube" href="http://www.youtube.com/watch?v=Rk6_hdRtJOE" target="_blank">
+                <i class="fa fa-play"></i>
+            </a>
+            <div class="section__inner">
+                <h2 class="section__title section__title--video">
+                    Наша видеопрезентация
+                </h2>
+                <div class="section__text section__text--video">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+                </div>
+            </div>
+            <div class="video__time">03:26</div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--devices">
+    <div class="container">
+        <div class="devices">
+            <div class="devices__item devices__item--left">
+                <img src="img/iPhone.png" alt="" class="devices__img">
+            </div>
+
+            <div class="devices__item devices__item--right">
+                <div class="section__inner section__inner--devices">
+                    <h2 class="section__title">
+                        Адаптивность для мобильных устройств
+                    </h2>
+                    <div class="section__text">
+                        <p>
+                           Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Что эта до рыбного однажды запятых не. Оксмокс переулка языком она продолжил которое вопроса агенство, гор что деревни! Это, ты.
+                        </p>
+                    </div>
+                </div>
+
+                <ul class="devices__advantages">
+                    <li>
+                        Далеко-далеко за словесными горами в стране, гласных и согласных.
+                    </li>
+                    <li>
+                        Далеко-далеко за словесными горами в стране, гласных и согласных.
+                    </li>
+                    <li>
+                        Далеко-далеко за словесными горами в стране, гласных и согласных.
+                    </li>
+                    <li>
+                        Далеко-далеко.
+                    </li>
+                </ul>
+            </div><!-- /.devices__item -->
+        </div><!-- /.devices -->
+    </div><!-- /.container -->
+</section>
+
+<div class="section--gradient" id="stat">
+    <div class="container">
+        <div class="stat">
+            <div class="stat__item">
+                <img src="img/stat/icon1.png" alt="" class="stat__img">
+                <div class="stat__num">3587</div>
+                <div class="stat__text">довольных клиентов</div>
+            </div>
+
+            <div class="stat__item">
+                <img src="img/stat/icon2.png" alt="" class="stat__img">
+                <div class="stat__num">207</div>
+                <div class="stat__text">чашек кофе</div>
+            </div>
+
+            <div class="stat__item">
+                <img src="img/stat/icon3.png" alt="" class="stat__img">
+                <div class="stat__num">2500</div>
+                <div class="stat__text">постов в блоге</div>
+            </div>
+
+            <div class="stat__item">
+                <img src="img/stat/icon4.png" alt="" class="stat__img">
+                <div class="stat__num">873</div>
+                <div class="stat__text">лайков</div>
+            </div>
+
+            <div class="stat__item">
+                <img src="img/stat/icon5.png" alt="" class="stat__img">
+                <div class="stat__num">900</div>
+                <div class="stat__text">обедов</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="section jsSectionBelowCounter" id="blog">
+    <div class="container">
+        <div class="section__inner">
+            <h2 class="section__title">
+                Последние посты
+            </h2>
+            <div class="section__text">
+                Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свой рукописи прямо, пояс реторический.
+            </div>
+        </div>
+
+        <div data-slider class="card">
+          <div>
+               <div class="card__item card__item--posts">
+                    <div class="card__header">
+                        <img src="img/posts/photo1.jpg" alt="" class="card__img">
+                        <div class="card__icons card__icons--date">
+                           <div class="posts-date">
+                               <div class="posts-date__num">30</div>
+                               <div class="posts-date__month">Сен.</div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="card__content card__content--posts">
+                        <div class="card__title card__title--posts">
+                            Далеко-далеко за словесными.
+                        </div>
+                        <div class="card__text card__text--posts">
+                            Далеко-далеко за словесными горами в стране, гласных и согласных.
+                        </div>
+                        <a href="#" class="card__link">Читать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card__item card__item--posts">
+                    <div class="card__header">
+                        <img src="img/posts/photo2.jpg" alt="" class="card__img">
+                        <div class="card__icons card__icons--date">
+                           <div class="posts-date">
+                               <div class="posts-date__num">30</div>
+                               <div class="posts-date__month">Сен.</div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="card__content card__content--posts">
+                        <div class="card__title card__title--posts">
+                            Далеко-далеко за словесными.
+                        </div>
+                        <div class="card__text card__text--posts">
+                            Далеко-далеко за словесными горами в стране, гласных и согласных.
+                        </div>
+                        <a href="#" class="card__link">Читать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card__item card__item--posts">
+                    <div class="card__header">
+                        <img src="img/posts/photo3.jpg" alt="" class="card__img">
+                        <div class="card__icons card__icons--date">
+                           <div class="posts-date">
+                               <div class="posts-date__num">30</div>
+                               <div class="posts-date__month">Сен.</div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="card__content card__content--posts">
+                        <div class="card__title card__title--posts">
+                            Далеко-далеко за словесными.
+                        </div>
+                        <div class="card__text card__text--posts">
+                            Далеко-далеко за словесными горами в стране, гласных и согласных.
+                        </div>
+                        <a href="#" class="link">Читать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+               <div class="card__item card__item--posts">
+                    <div class="card__header">
+                        <img src="img/posts/photo1.jpg" alt="" class="card__img">
+                        <div class="card__icons card__icons--date">
+                           <div class="posts-date">
+                               <div class="posts-date__num">30</div>
+                               <div class="posts-date__month">Сен.</div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="card__content card__content--posts">
+                        <div class="card__title card__title--posts">
+                            Далеко-далеко за словесными.
+                        </div>
+                        <div class="card__text card__text--posts">
+                            Далеко-далеко за словесными горами в стране, гласных и согласных.
+                        </div>
+                        <a href="#" class="card__link">Читать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card__item card__item--posts">
+                    <div class="card__header">
+                        <img src="img/posts/photo2.jpg" alt="" class="card__img">
+                        <div class="card__icons card__icons--date">
+                           <div class="posts-date">
+                               <div class="posts-date__num">30</div>
+                               <div class="posts-date__month">Сен.</div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="card__content card__content--posts">
+                        <div class="card__title card__title--posts">
+                            Далеко-далеко за словесными.
+                        </div>
+                        <div class="card__text card__text--posts">
+                            Далеко-далеко за словесными горами в стране, гласных и согласных.
+                        </div>
+                        <a href="#" class="card__link">Читать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card__item card__item--posts">
+                    <div class="card__header">
+                        <img src="img/posts/photo3.jpg" alt="" class="card__img">
+                        <div class="card__icons card__icons--date">
+                           <div class="posts-date">
+                               <div class="posts-date__num">30</div>
+                               <div class="posts-date__month">Сен.</div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="card__content card__content--posts">
+                        <div class="card__title card__title--posts">
+                            Далеко-далеко за словесными.
+                        </div>
+                        <div class="card__text card__text--posts">
+                            Далеко-далеко за словесными горами в стране, гласных и согласных.
+                        </div>
+                        <a href="#" class="link">Читать больше</a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.slider -->
+
+    </div><!-- /.container -->
+</section>
+
+<div class="section section--logos jsSectionBelowCounter">
+    <div class="container">
+        <div class="logos">
+            <div class="logos__item">
+                <img src="img/logos/logo1.png" alt="">
+            </div>
+            <div class="logos__item">
+                <img src="img/logos/logo2.png" alt="">
+            </div>
+            <div class="logos__item">
+                <img src="img/logos/logo3.png" alt="">
+            </div>
+            <div class="logos__item">
+                <img src="img/logos/logo4.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__col footer__col--first">
+                <div class="logo logo--footer">
+                    <img src="img/logo.png" alt="">
+                    <span>Waxom</span>
+               </div>
+               <p class="footer__descript">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ему своих агенство там назад наш семантика языком, оксмокс пунктуация образ меня дороге страну. Снова.
+               </p>
+                <a href="#" class="link link--footer">Читать больше</a>
+            </div>
+
+            <div class="footer__col">
+                <h3 class="footer__title">Последние посты</h3>
+                <div class="footer-list">
+                    <div class="footer-list__item">
+                        <div class="footer-list__time">
+                            Сентябрь 08, 2015
+                        </div>
+                        <div class="footer-list__text">
+                            Далеко-далеко за словесными горами в стране, гласных.
+                        </div>
+                    </div>
+
+                    <div class="footer-list__item">
+                        <div class="footer-list__time">
+                            Сентябрь 08, 2015
+                        </div>
+                        <div class="footer-list__text">
+                            Далеко-далеко за словесными горами в стране, гласных.
+                        </div>
+                    </div>
+
+                    <div class="footer-list__item">
+                        <div class="footer-list__time">
+                            Сентябрь 08, 2015
+                        </div>
+                        <div class="footer-list__text">
+                            Далеко-далеко за словесными горами в стране, гласных.
+                        </div>
+                    </div>
+                </div><!-- /.footer-list -->
+            </div><!-- /.footer__col -->
+
+            <div class="footer__col">
+                <h3 class="footer__title">Наш Твиттер</h3>
+                <div class="footer__list">
+                    <div class="footer-list__item">
+                        <div class="footer-list__text footer-list__text--twitt">
+                            <span>Далеко-</span> далеко за словесными горами в стране, гласных и согласных.
+                        </div>
+                        <div class="footer-list__time footer-list__time--twitt">
+                            3 минуты назад
+                        </div>
+                    </div>
+
+                    <div class="footer-list__item">
+                        <div class="footer-list__text footer-list__text--twitt">
+                            Далеко-далеко за словесными <span>#горами</span> в стране, гласных и согласных.
+                        </div>
+                        <div class="footer-list__time footer-list__time--twitt">
+                           5 часов назад
+                        </div>
+                    </div>
+
+                    <div class="footer-list__item">
+                        <div class="footer-list__text footer-list__text--twitt">
+                            Далеко-далеко за словесными.
+                        </div>
+                        <div class="footer-list__time footer-list__time--twitt">
+                            20 дней назад
+                        </div>
+                    </div>
+                </div><!-- /.footer__list -->
+            </div><!-- /.footer__col -->
+
+            <div class="footer__col">
+                <h3 class="footer__title">Виджет</h3>
+                <div class="widget">
+                    <a href="#" class="widget__item">
+                        <img src="img/projects/project1.jpg" alt="" class="widget__img">
+                    </a>
+                    <a href="#" class="widget__item">
+                        <img src="img/projects/project2.jpg" alt="" class="widget__img">
+                    </a>
+                    <a href="#" class="widget__item">
+                        <img src="img/projects/project3.jpg" alt="" class="widget__img">
+                    </a>
+                    <a href="#" class="widget__item">
+                        <img src="img/projects/project4.jpg" alt="" class="widget__img">
+                    </a>
+                </div>
+            </div>
+        </div><!-- /.footer__inner -->
+    </div><!-- /.container -->
+</footer>
+
+<div class="copyright">
+    <div class="container">
+       <div class="copyright__inner">
+            <div class="copyright__item">
+                Copyright (c) 2015 <span>Waxom</span>
+                <a href="#" class="copyright__link">Политика Конфиденциальности
+                </a>
+                <a href="#" class="copyright__link">FAQ</a>
+                <a href="#" class="copyright__link">Поддержка</a>
+            </div>
+            <div class="copyright__item copyright__item--right">
+                Дизайн - <span>Плюснин Никита</span>
+                <a href="#" class="copyright__link">
+                    Только на <span>Envato Market</span>
+                </a>
+            </div>
+       </div>
+    </div>
+</div>
+
+<div class="back-top">
+    <a href="#" class="back-top__inner">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<!-- Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/vendor/jquery.magnific-popup.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
